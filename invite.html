@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourav Weds [Partner Name]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fffaf5;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    section{
+      min-height:100vh;
+      padding:60px 8%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .hero{
+      background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      font-family:'Cinzel',serif;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      margin-bottom:12px;
+    }
+
+    .scroll-down{
+      margin-top:40px;
+      font-size:14px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce{
+      0%,20%,50%,80%,100%{
+        transform:translateY(0);
+      }
+      40%{
+        transform:translateY(-10px);
+      }
+      60%{
+        transform:translateY(-5px);
+      }
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.8rem;
+      font-family:'Cinzel',serif;
+      color:#a8741a;
+      margin-bottom:10px;
+    }
+
+    .timeline{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .day-card{
+      background:white;
+      border-radius:18px;
+      padding:30px;
+      margin-bottom:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .day-card h3{
+      font-size:2rem;
+      color:#c18b1b;
+      margin-bottom:20px;
+      font-family:'Cinzel',serif;
+    }
+
+    .event{
+      display:flex;
+      justify-content:space-between;
+      padding:14px 0;
+      border-bottom:1px solid #eee;
+      gap:20px;
+    }
+
+    .event:last-child{
+      border-bottom:none;
+    }
+
+    .event-time{
+      font-weight:600;
+      color:#555;
+      min-width:180px;
+    }
+
+    .venue-box{
+      background:#fff;
+      border-radius:20px;
+      padding:35px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      max-width:800px;
+      margin:auto;
+    }
+
+    .venue-box h3{
+      font-size:2rem;
+      margin-bottom:15px;
+      color:#b07a14;
+      font-family:'Cinzel',serif;
+    }
+
+    .map-placeholder{
+      margin-top:25px;
+      height:350px;
+      border-radius:20px;
+      overflow:hidden;
+    }
+
+    .map-placeholder iframe{
+      width:100%;
+      height:100%;
+      border:none;
+    }
+
+    .rsvp-section{
+      background:#fff5ea;
+    }
+
+    form{
+      max-width:700px;
+      margin:auto;
+      background:white;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .form-group{
+      margin-bottom:20px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:600;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:14px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      font-size:15px;
+      font-family:'Poppins',sans-serif;
+    }
+
+    button{
+      background:#c08a1b;
+      color:white;
+      border:none;
+      padding:15px 30px;
+      border-radius:12px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+      width:100%;
+      font-weight:600;
+    }
+
+    button:hover{
+      background:#9f6f10;
+    }
+
+    .footer{
+      text-align:center;
+      padding:30px;
+      background:#111;
+      color:white;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.6rem;
+      }
+
+      .event{
+        flex-direction:column;
+      }
+
+      .event-time{
+        min-width:auto;
+      }
+
+      section{
+        padding:50px 20px;
+      }
+
+      form{
+        padding:25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <p>You're Invited To</p>
+
+    <h1>Gourav <br> & <br> [Partner Name]</h1>
+
+    <p>10th - 13th December 2026</p>
+    <p>Jaipur, Rajasthan</p>
+
+    <div class="scroll-down">
+      Scroll Down ↓
+    </div>
+
+  </section>
+
+  <!-- ITINERARY -->
+  <section>
+
+    <div class="section-title">
+      <h2>Wedding Itinerary</h2>
+      <p>Celebrating love with family & friends</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- DAY 1 -->
+      <div class="day-card">
+
+        <h3>10th December 2026</h3>
+
+        <div class="event">
+          <div class="event-time">7:00 PM - 9:00 PM</div>
+          <div>Dinner</div>
+        </div>
+
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-card">
+
+        <h3>11th December 2026</h3>
+
+        <div class="event">
+          <div class="event-time">9:00 AM - 10:00 AM</div>
+          <div>Basan Ceremony</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">9:00 AM - 11:00 AM</div>
+          <div>Breakfast</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">1:00 PM - 3:30 PM</div>
+          <div>Haldi Ceremony</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">2:00 PM - 4:00 PM</div>
+          <div>Lunch</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">4:30 PM - 5:30 PM</div>
+          <div>Hi-Tea</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">7:00 PM - 7:30 PM</div>
+          <div>Ring Ceremony</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">7:30 PM - 10:30 PM</div>
+          <div>Sangeet Night</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">8:00 PM - 10:00 PM</div>
+          <div>Dinner</div>
+        </div>
+
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-card">
+
+        <h3>12th December 2026</h3>
+
+        <div class="event">
+          <div class="event-time">8:00 AM - 10:00 AM</div>
+          <div>Breakfast</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">8:00 AM - 10:00 AM</div>
+          <div>Mandal Ceremony (Bride Side)</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">8:00 AM - 9:00 AM</div>
+          <div>Navgraha Pooja (Groom Side)</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">12:00 PM - 3:00 PM</div>
+          <div>Sagai, Agwani, Godbharai, Athwana & Gangaur Pooja</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">1:30 PM - 3:30 PM</div>
+          <div>Lunch</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">3:00 PM - 5:00 PM</div>
+          <div>Ghadoli & Haldi Ceremony (Groom Side)</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">4:30 PM - 5:30 PM</div>
+          <div>Hi-Tea</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">6:30 PM - 7:30 PM</div>
+          <div>Sehra Bandhi</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">7:30 PM - 9:00 PM</div>
+          <div>Barat Nikasi</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">9:00 PM - 9:30 PM</div>
+          <div>Milni + Toran</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">9:30 PM</div>
+          <div>Varmala</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">8:00 PM - 10:30 PM</div>
+          <div>Dinner</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">12:35 AM - 3:30 AM</div>
+          <div>Phere Ceremony</div>
+        </div>
+
+      </div>
+
+      <!-- DAY 4 -->
+      <div class="day-card">
+
+        <h3>13th December 2026</h3>
+
+        <div class="event">
+          <div class="event-time">4:00 AM</div>
+          <div>Vidai</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">6:00 AM</div>
+          <div>Pag Phera</div>
+        </div>
+
+        <div class="event">
+          <div class="event-time">8:00 AM - 10:00 AM</div>
+          <div>Breakfast & Departure</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VENUE -->
+  <section>
+
+    <div class="section-title">
+      <h2>Venue</h2>
+      <p>We can't wait to celebrate with you</p>
+    </div>
+
+    <div class="venue-box">
+
+      <h3>Bamboo Saa Resort</h3>
+
+      <p>
+        Jaipur, Rajasthan
+      </p>
+
+      <div class="map-placeholder">
+
+        <!-- REPLACE WITH YOUR GOOGLE MAP EMBED -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.3860611910877!2d75.86710168354526!3d27.14414091594278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396da8edea3db705%3A0x1f35db5e78556a2a!2sBamboo%20Saa%20Sunrrise%20Weddings%20%26%20Wellness%20Resort%20%7C%20Jaipur!5e0!3m2!1sen!2sus!4v1779476866209!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section">
+
+    <div class="section-title">
+      <h2>RSVP</h2>
+      <p>Please let us know if you’ll be joining us</p>
+    </div>
+
+    <form id="rsvpForm">
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="form-group">
+        <label>Will you attend?</label>
+
+        <select id="attendance" required>
+          <option value="">Select</option>
+          <option>Yes, definitely!</option>
+          <option>Maybe</option>
+          <option>Sorry, can't make it</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Number of Guests</label>
+        <input type="number" id="guests" min="1" value="1">
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" id="message"></textarea>
+      </div>
+
+      <button type="submit">
+        Submit RSVP
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Made with ❤️ for our wedding celebration
+  </div>
+
+  <script>
+
+    // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzE87ASxURJzf0cJcQz02wSS2W2iKG9oGZd4SNh-Xz5dggEwkshBUiL1L5O1mwaCYID/exec";
+document
+  .getElementById("rsvpForm")
+  .addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+      attendance: document.getElementById("attendance").value,
+      guests: document.getElementById("guests").value,
+      message: document.getElementById("message").value
+    };
+
+    try {
+
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      alert("RSVP Submitted Successfully!");
+
+      document.getElementById("rsvpForm").reset();
+
+    } catch(error) {
+
+      console.error(error);
+
+      alert("Error submitting RSVP");
+
+    }
+
+});
+
+</script>
+  </script>
+
+</body>
+</html>
