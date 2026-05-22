@@ -7,10 +7,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    *{
+    /* *{
       margin:0;
       padding:0;
       box-sizing:border-box;
@@ -231,18 +232,51 @@
       form{
         padding:25px;
       }
-    }
+    } */
   </style>
 </head>
 <body>
 
+  <section class = "hero">
+    <div class="invite-content">
+
+    <p class="small-text">
+      With the heavenly blessings of
+    </p>
+
+    <p>
+      Lt. Smt Geeta Devi & Shri Kesar Das Khatri
+      Lt. Varsha Devi & J.R. Chopra
+    </p>
+
+    <div class="invite-divider"></div>
+
+    <p>
+      Mrs. Madhuri & Anand Kumar Khatri 
+    </p>
+
+    <h1 class="invite-heading">
+      INVITE
+    </h1>
+
+    <p>
+      You to join us in the wedding celebrations of
+    </p>
+
+  </div>
+  <!-- </section> -->
+
   <!-- HERO SECTION -->
-  <section class="hero">
+  <!-- <section class="hero"> -->
 
-    <p>You're Invited To</p>
-
-    <h1>Anustha <br> & <br> Gourav</h1>
-
+    <p>Two Hearts, One Forever</p>
+    <h1>Gourav <br> & <br> Anustha</h1>
+    <p class="small-text">
+      Daughter of
+    </p>
+    <p>
+      Mrs. Neelu & Mr. Anil Gautam
+    </p>
     <p>10th - 13th December 2026</p>
     <p>Jaipur, Rajasthan</p>
 
@@ -251,7 +285,79 @@
     </div>
 
   </section>
+  
+<section class="couple-section">
 
+  <div class="section-title">
+    <h2>Meet The Couple</h2>
+    <p>The beginning of forever</p>
+  </div>
+
+  <div class="couple-container">
+
+    <div class="person-card">
+
+      <div class="person-image">
+        <img src="" alt="Bride">
+      </div>
+
+      <h3>Anustha</h3>
+
+      <p>
+        The dreamer, the graceful soul, and the heart behind every beautiful moment.
+      </p>
+
+    </div>
+
+    <div class="person-card">
+
+      <div class="person-image">
+        <img src="YOUR_GROOM_IMAGE.jpg" alt="Groom">
+      </div>
+
+      <h3>Gourav</h3>
+
+      <p>
+        The calm spirit, the storyteller, and the one who makes every moment brighter.
+      </p>
+
+    </div>
+
+  </div>
+
+<section class="countdown-section">
+
+  <div class="section-title" style="color:#b07a14;">
+    <h2 style="color:#b07a14;">Countdown To Forever</h2>
+    <p>12th December 2026</p>
+  </div>
+
+  <div class="countdown-container">
+
+    <div class="count-box">
+      <h3 id="days">00</h3>
+      <p>Days</p>
+    </div>
+
+    <div class="count-box">
+      <h3 id="hours">00</h3>
+      <p>Hours</p>
+    </div>
+
+    <div class="count-box">
+      <h3 id="minutes">00</h3>
+      <p>Minutes</p>
+    </div>
+
+    <div class="count-box">
+      <h3 id="seconds">00</h3>
+      <p>Seconds</p>
+    </div>
+
+  </div>
+
+</section>
+</section>
   <!-- ITINERARY -->
   <section>
 
@@ -547,9 +653,44 @@ document
     }
 
 });
+const weddingDate = new Date("December 12, 2026 21:30:00").getTime();
 
+setInterval(() => {
+
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
+const fadeElements = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+
+  });
+
+}, {
+  threshold:0.1
+});
+
+fadeElements.forEach((el) => {
+  observer.observe(el);
+});
 </script>
-  </script>
 
 </body>
 </html>
