@@ -698,9 +698,9 @@ nav a:hover::after{
     border-bottom:1px solid rgba(212,175,55,.14);
     transition:.35s ease;
 }
-.event-item:last-child{
+/* .event-item:last-child{
     border-bottom:none;
-}
+} */
 .event-item:hover{
     transform:translateX(6px);
     border-color:rgba(212,175,55,.38);
@@ -752,12 +752,12 @@ nav a:hover::after{
 ==========================================*/
 .venue{
     background:var(--paper);
-    padding:120px 0;
+    padding:80px 0;
 }
 /* HERO IMAGE */
 .venue-hero{
     width:min(1400px,92%);
-    margin:70px auto;
+    margin:0px auto;
     position:relative;
     border-radius:30px;
     overflow:hidden;
@@ -866,7 +866,7 @@ nav a:hover::after{
     margin:70px auto 0;
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:35px;
+    gap:15px;
 }
 
 .family-card{
@@ -944,122 +944,256 @@ nav a:hover::after{
 /*==========================================
                 RSVP
 ==========================================*/
+/*==========================================
+                RSVP
+==========================================*/
+
 .rsvp{
+
     background:#fdf9f4;
-    padding:140px 0;
+
+    padding:110px 0;
+
 }
+
 .rsvp-card{
-    width:min(900px,90%);
-    margin:70px auto 0;
-    background:white;
-    border-radius:30px;
-    padding:60px;
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.08);
+
+    width:min(820px,90%);
+
+    margin:50px auto 0;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    padding:45px;
+
     border:1px solid rgba(212,175,55,.18);
+
+    box-shadow:0 22px 60px rgba(0,0,0,.08);
+
 }
-/* ROWS */
+
+/*==========================================
+                ROWS
+==========================================*/
+
 .form-row{
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:30px;
-    margin-bottom:30px;
+
+    gap:22px;
+
+    margin-bottom:22px;
+
 }
-/* FORM GROUP */
+
+/*==========================================
+              FORM GROUP
+==========================================*/
+
 .form-group{
+
     display:flex;
+
     flex-direction:column;
-    margin-bottom:30px;
+
+    margin-bottom:22px;
+
 }
+
 .form-group label{
+
     font-family:'Cinzel',serif;
-    font-size:13px;
+
+    font-size:12px;
+
     letter-spacing:3px;
+
     text-transform:uppercase;
+
     color:var(--gold);
-    margin-bottom:12px;
+
+    margin-bottom:8px;
+
 }
-/* INPUTS */
+
+/*==========================================
+                INPUTS
+==========================================*/
+
 .rsvp input,
 .rsvp textarea{
+
     width:100%;
+
     border:none;
+
     border-bottom:1px solid rgba(0,0,0,.18);
+
     background:transparent;
-    padding:14px 0;
-    font-size:17px;
+
+    padding:10px 0;
+
+    font-size:10px;
+
     font-family:'Poppins',sans-serif;
+
     transition:.35s;
+
 }
+
 .rsvp input:focus,
 .rsvp textarea:focus{
+
     outline:none;
+
     border-color:var(--gold);
+
 }
+
 .rsvp textarea{
+
     resize:vertical;
-    min-height:130px;
+
+    min-height:95px;
+
 }
-/* ATTENDANCE */
+
+/*==========================================
+            ATTENDANCE
+==========================================*/
+
 .attendance-options{
+
     display:flex;
-    gap:18px;
-    flex-wrap:wrap;
+
+    gap:8px;
+
+    flex-wrap:nowrap;
+
 }
+
 .attendance-card{
+
     cursor:pointer;
+
 }
+
 .attendance-card input{
+
     display:none;
+
 }
+
 .attendance-card span{
+
     display:block;
-    padding:15px 26px;
-    border:1px solid rgba(212,175,55,.25);
-    border-radius:50px;
+
+    padding:10px 16px;
+
+    border:1px solid rgba(212,175,55,.22);
+
+    border-radius:30px;
+
     transition:.35s;
+
     color:#444;
-    background:white;
+
+    background:#fff;
+
+    font-size:10px;
+
+    font-weight:200;
+
+    min-width:135px;
+
+    text-align:center;
+
 }
 .attendance-card input:checked + span{
     background:var(--gold);
-    color:white;
+    color:#fff;
     border-color:var(--gold);
-    box-shadow:0 10px 30px rgba(212,175,55,.25);
+    box-shadow:0 5px 14px rgba(212,175,55,.18);
 }
-/* EVENT PILLS */
+
+/*==========================================
+              EVENT PILLS
+==========================================*/
+
 .event-pills{
+
     display:flex;
-    flex-wrap:wrap;
-    gap:15px;
+
+    flex-wrap:nowrap;
+    gap:5px;
+
 }
+
 .pill{
+
     cursor:pointer;
+
 }
+
 .pill input{
+
     display:none;
+
 }
+
 .pill span{
+
     display:block;
-    padding:14px 24px;
+
+    padding:11px 15px;
+
     border-radius:40px;
+
     border:1px solid rgba(212,175,55,.25);
+
     transition:.3s;
+
     background:#fff;
+
+    font-size:10px;
+
 }
+
 .pill input:checked + span{
+
     background:var(--gold);
-    color:white;
+
+    color:#fff;
+
     border-color:var(--gold);
+
 }
-/* BUTTON */
+
+/*==========================================
+                BUTTON
+==========================================*/
+
 .rsvp .gold-button{
+
     width:100%;
-    margin-top:15px;
-    padding:18px;
-    font-size:17px;
+
+    margin-top:10px;
+
+    padding:15px;
+
+    font-size:16px;
+
     letter-spacing:2px;
+
 }
+
+/*==========================================
+                MOBILE
+==========================================*/
 /* MOBILE */
 @media(max-width:768px){
     .rsvp{
@@ -1074,16 +1208,25 @@ nav a:hover::after{
         gap:0;
     }
     .attendance-options{
-        flex-direction:column;
+        flex-direction:row;
     }
     .attendance-card span{
         text-align:center;
     }
 }
+
+/*==========================================
+            DISABLED BUTTON
+==========================================*/
+
 .rsvp button:disabled{
+
     opacity:.65;
+
     cursor:not-allowed;
+
     transform:none;
+
 }
 /* ======================================
    FOOTER
