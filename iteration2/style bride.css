@@ -379,7 +379,6 @@ nav a:hover::after{
 .family-block span{
     display:block;
     margin-top:10px;
-
     color:#777;
     font-style:italic;
     font-size:22px;
@@ -426,7 +425,6 @@ nav a:hover::after{
     text-transform:uppercase;
     color:var(--gold);
     margin-bottom:22px;
-
 }
 .couple .section-title h2{
     font-family:'Cormorant Garamond', serif;
@@ -450,12 +448,9 @@ nav a:hover::after{
     gap:80px;
     align-items:center;
     margin:50px 0;
-
 }
 .person-image{
-
     position:relative;
-
 }
 .person-image img{
     width:100%;
@@ -651,188 +646,99 @@ nav a:hover::after{
 /* ===========================================
    EVENTS
 =========================================== */
-
 .events{
-
     background:var(--paper);
-
     color:#222;
-
 }
-
 .event-day{
-
     max-width:980px;
-
     margin:90px auto;
-
 }
-
 /* DAY TITLE */
-
 .event-day h3{
-
     font-family:'Cormorant Garamond',serif;
-
     font-size:64px;
-
     font-weight:500;
-
     text-align:center;
-
     color:var(--gold);
-
     letter-spacing:1px;
-
     margin-bottom:55px;
-
     position:relative;
-
 }
-
 .event-day h3::before,
 .event-day h3::after{
-
     content:"";
-
     position:absolute;
-
     top:50%;
-
     width:30%;
-
     height:1px;
-
     background:linear-gradient(
         transparent,
         rgba(212,175,55,.45),
         transparent
     );
-
 }
-
 .event-day h3::before{
-
     left:0;
-
 }
-
 .event-day h3::after{
-
     right:0;
-
 }
-
 /* EVENT ROW */
-
 .event-item{
-
     display:grid;
-
     grid-template-columns:140px 1fr;
-
     gap:42px;
-
     align-items:start;
-
     padding:32px 0;
-
     border-bottom:1px solid rgba(212,175,55,.14);
-
     transition:.35s ease;
-
 }
-
 .event-item:last-child{
-
     border-bottom:none;
-
 }
-
 .event-item:hover{
-
     transform:translateX(6px);
-
     border-color:rgba(212,175,55,.38);
-
 }
-
 /* TIME */
-
 .event-item span{
-
     display:flex;
-
     flex-direction:column;
-
     align-items:flex-start;
-
     font-family:'Cinzel',serif;
-
     color:var(--gold);
-
     font-weight:600;
-
     line-height:1;
-
 }
-
 .event-item span strong{
-
     font-size:27px;
-
     font-weight:600;
-
     letter-spacing:1px;
-
 }
-
 .event-item span small{
-
     margin-top:8px;
-
     font-size:12px;
-
     letter-spacing:5px;
-
     text-transform:uppercase;
-
     opacity:.75;
-
 }
-
 /* EVENT TITLE */
-
 .event-item h4{
-
     font-family:'Cormorant Garamond',serif;
-
     font-size:32px;
-
     font-weight:600;
-
     color:#222;
-
     margin-bottom:6px;
-
     line-height:1.15;
-
 }
-
 /* DESCRIPTION */
-
 .event-item p{
-
     max-width:560px;
-
     color:#777;
-
     font-size:18px;
-
     line-height:1.7;
-
     margin:0;
-
 }
 /* ======================================
    VENUE
@@ -840,148 +746,82 @@ nav a:hover::after{
 /*==========================================
                 VENUE
 ==========================================*/
-
 .venue{
-
     background:var(--paper);
-
     padding:120px 0;
-
 }
-
 /* HERO IMAGE */
-
 .venue-hero{
-
     width:min(1400px,92%);
-
     margin:70px auto;
-
     position:relative;
-
     border-radius:30px;
-
     overflow:hidden;
-
     box-shadow:
-
         0 35px 80px rgba(0,0,0,.18);
-
 }
-
 .venue-hero img{
-
     width:100%;
-
     height:700px;
-
     object-fit:cover;
-
     transition:8s ease;
-
 }
-
 .venue:hover .venue-hero img{
-
     transform:scale(1.08);
-
 }
-
 .venue-overlay{
     position:absolute;
     inset:0;
     display:flex;
-
     flex-direction:column;
-
     justify-content:flex-end;
-
     align-items:flex-start;
-
     padding:50px;
-
     background:linear-gradient(
         to top,
         rgba(0,0,0,.82),
         rgba(0,0,0,.20),
         transparent
     );
-
 }
-
 .venue-overlay h3{
-
     font-family:'Cormorant Garamond',serif;
-
     font-size:58px;
-
     color:#fff;
-
     margin-bottom:15px;
-
 }
-
 .venue-overlay p{
-
     max-width:650px;
-
     color:rgba(255,255,255,.85);
-
     font-size:22px;
-
     line-height:1.8;
-
     margin-bottom:35px;
-
 }
-
 /* MAP */
-
 .venue-map{
-
     width:min(1100px,90%);
-
     margin:80px auto 0;
-
     border-radius:25px;
-
     overflow:hidden;
-
     box-shadow:
-
         0 20px 60px rgba(0,0,0,.15);
-
 }
-
 .venue-map iframe{
-
     width:100%;
-
     height:500px;
-
     border:none;
-
 }
 /* ===========================================
    VENUE SECTION TITLE OVERRIDES
 =========================================== */
-
 .venue .section-subtitle{
-
     color:var(--gold);
-
 }
-
 .venue .section-title h2{
-
     color:#222;
-
 }
-
 .venue .section-description{
-
     color:#666;
-
 }
 /* ======================================
    GALLERY
@@ -1013,283 +853,146 @@ nav a:hover::after{
 /*==========================================
                 RSVP
 ==========================================*/
-
 .rsvp{
-
     background:#fdf9f4;
-
     padding:140px 0;
-
 }
-
 .rsvp-card{
-
     width:min(900px,90%);
-
     margin:70px auto 0;
-
     background:white;
-
     border-radius:30px;
-
     padding:60px;
-
     box-shadow:
         0 25px 70px rgba(0,0,0,.08);
-
     border:1px solid rgba(212,175,55,.18);
-
 }
-
 /* ROWS */
-
 .form-row{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:30px;
-
     margin-bottom:30px;
-
 }
-
 /* FORM GROUP */
-
 .form-group{
-
     display:flex;
-
     flex-direction:column;
-
     margin-bottom:30px;
-
 }
-
 .form-group label{
-
     font-family:'Cinzel',serif;
-
     font-size:13px;
-
     letter-spacing:3px;
-
     text-transform:uppercase;
-
     color:var(--gold);
-
     margin-bottom:12px;
-
 }
-
 /* INPUTS */
-
 .rsvp input,
 .rsvp textarea{
-
     width:100%;
-
     border:none;
-
     border-bottom:1px solid rgba(0,0,0,.18);
-
     background:transparent;
-
     padding:14px 0;
-
     font-size:17px;
-
     font-family:'Poppins',sans-serif;
-
     transition:.35s;
-
 }
-
 .rsvp input:focus,
 .rsvp textarea:focus{
-
     outline:none;
-
     border-color:var(--gold);
-
 }
-
 .rsvp textarea{
-
     resize:vertical;
-
     min-height:130px;
-
 }
-
 /* ATTENDANCE */
-
 .attendance-options{
-
     display:flex;
-
     gap:18px;
-
     flex-wrap:wrap;
-
 }
-
 .attendance-card{
-
     cursor:pointer;
-
 }
-
 .attendance-card input{
-
     display:none;
-
 }
-
 .attendance-card span{
-
     display:block;
-
     padding:15px 26px;
-
     border:1px solid rgba(212,175,55,.25);
-
     border-radius:50px;
-
     transition:.35s;
-
     color:#444;
-
     background:white;
-
 }
-
 .attendance-card input:checked + span{
-
     background:var(--gold);
-
     color:white;
-
     border-color:var(--gold);
-
     box-shadow:0 10px 30px rgba(212,175,55,.25);
-
 }
-
 /* EVENT PILLS */
-
 .event-pills{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:15px;
-
 }
-
 .pill{
-
     cursor:pointer;
-
 }
-
 .pill input{
-
     display:none;
-
 }
-
 .pill span{
-
     display:block;
-
     padding:14px 24px;
-
     border-radius:40px;
-
     border:1px solid rgba(212,175,55,.25);
-
     transition:.3s;
-
     background:#fff;
-
 }
-
 .pill input:checked + span{
-
     background:var(--gold);
-
     color:white;
-
     border-color:var(--gold);
-
 }
-
 /* BUTTON */
-
 .rsvp .gold-button{
-
     width:100%;
-
     margin-top:15px;
-
     padding:18px;
-
     font-size:17px;
-
     letter-spacing:2px;
-
 }
-
 /* MOBILE */
-
 @media(max-width:768px){
-
     .rsvp{
-
         padding:90px 0;
-
     }
-
     .rsvp-card{
-
         padding:35px 25px;
-
         border-radius:20px;
-
     }
-
     .form-row{
-
         grid-template-columns:1fr;
-
         gap:0;
-
     }
-
     .attendance-options{
-
         flex-direction:column;
-
     }
-
     .attendance-card span{
-
         text-align:center;
-
     }
-
 }
 .rsvp button:disabled{
-
     opacity:.65;
-
     cursor:not-allowed;
-
     transform:none;
-
 }
 /* ======================================
    FOOTER
@@ -1416,17 +1119,11 @@ footer{
     }
 }
 @media (max-width:768px){
-
     .venue-overlay .gold-button{
-
         width:100%;
-
         max-width:260px;
-
         text-align:center;
-
         padding:16px 20px;
-
         font-size:15px;
     }
 }
@@ -1460,43 +1157,24 @@ footer{
     }
 }
 @media(max-width:900px){
-
 .person{
-
 display:flex;
-
 flex-direction:column;
-
 text-align:center;
-
 gap:40px;
-
 }
-
 .groom{
-
 flex-direction:column-reverse;
-
 }
-
 .person-image img{
-
 margin:auto;
-
 }
-
 .mini-divider{
-
 margin:0 auto 30px;
-
 }
-
 .bio{
-
 margin:auto;
-
 }
-
 }
 .small{
     animation:fadeUp 1.2s;
@@ -1549,22 +1227,18 @@ margin:auto;
     left:12%;
     animation-duration:18s, 4s;
 }
-
 .particles span:nth-child(2){
     left:32%;
     animation-duration:22s, 5s;
 }
-
 .particles span:nth-child(3){
     left:48%;
     animation-duration:15s, 3.5s;
 }
-
 .particles span:nth-child(4){
     left:66%;
     animation-duration:20s, 4.5s;
 }
-
 .particles span:nth-child(5){
     left:82%;
     animation-duration:16s, 3s;
