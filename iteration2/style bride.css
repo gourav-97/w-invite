@@ -847,6 +847,121 @@ nav a:hover::after{
     transform:scale(1.05);
     box-shadow:0 20px 40px rgba(0,0,0,.2);
 }
+/*==========================================
+              FAMILY
+==========================================*/
+
+.family{
+
+    background:#fbf7f2;
+
+    padding:130px 0;
+
+}
+
+.family-grid{
+
+    width:min(900px,90%);
+
+    margin:70px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.family-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    border:1px solid rgba(212,175,55,.18);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.family-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.10);
+
+}
+
+.family-role{
+
+    display:block;
+
+    font-family:'Cinzel',serif;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+    margin-bottom:22px;
+
+}
+
+.family-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    font-weight:600;
+
+    color:#222;
+
+    margin:10px 0;
+
+}
+
+.family-card p{
+
+    color:var(--gold);
+
+    font-size:20px;
+
+    margin:8px 0;
+
+}
+
+.full-width{
+
+    grid-column:1 / -1;
+
+}
+
+@media(max-width:768px){
+
+    .family-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .full-width{
+
+        grid-column:auto;
+
+    }
+
+}
 /* ======================================
    RSVP
 ====================================== */
