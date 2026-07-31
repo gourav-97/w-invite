@@ -216,7 +216,10 @@ const form=document.getElementById("rsvpForm");
 form.addEventListener("submit",async(e)=>{
 
 e.preventDefault();
+const button = document.querySelector('#rsvpForm button');
 
+button.disabled = true;
+button.innerHTML = "Sending...";
 const selectedEvents=[];
 
 document.querySelectorAll(".event-checkbox").forEach(box=>{
@@ -237,7 +240,7 @@ phone:document.getElementById("phone").value,
 
 email:document.getElementById("email").value,
 
-attendance:document.getElementById("attendance").value,
+attendance: document.querySelector('input[name="attendance"]:checked').value,
 
 guests:document.getElementById("guests").value,
 
@@ -268,7 +271,8 @@ body:JSON.stringify(data)
 alert("Thank you! Your RSVP has been received.");
 
 form.reset();
-
+button.disabled = false;
+button.innerHTML = "Confirm Attendance";
 }
 
 catch(e){

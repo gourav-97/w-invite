@@ -169,8 +169,7 @@
         <div class="person-content">
             <span class="mini-divider"></span>
             <h3>Gourav</h3>
-<!-- 
-            <h4>Son of</h4>
+            <!-- <h4>Son of</h4>
             <p class="parents">
                 Mr. XXXXXXX <br>
                 &amp; Mrs. XXXXXXX
@@ -181,17 +180,11 @@
                 are the ones shared together.
                 His laughter and kindness define him.
             </p>
-
         </div>
-
         <div class="person-image">
-
             <img src="assets/gourav.jpg" alt="Groom">
-
         </div>
-
     </div>
-
 </section>
 <!-- ================================= -->
 <!-- COUNTDOWN -->
@@ -270,7 +263,7 @@
     <!-- <div class="event-day">
         <h3>10 December</h3>
         <div class="event-item">
-            <span>7:00 PM</span>
+            <span>7:00 <small>PM</small></span>
             <div>
                 <h4>Welcome Dinner</h4>
                 <p>An evening of warmth, laughter and togetherness.</p>
@@ -280,21 +273,25 @@
     <div class="event-day">
         <h3>11 December</h3>
         <div class="event-item">
-            <span>9:00 AM</span>
+            <span>9:00 <small>AM</small></span>
             <div>
                 <h4>Basan Ceremony</h4>
                 <p>A joyful beginning to the wedding celebrations.</p>
             </div>
         </div>
         <div class="event-item">
-            <span>1:00 PM</span>
+            <span>1:00
+                <small>PM</small>
+            </span>
             <div>
                 <h4>Haldi Ceremony</h4>
                 <p>A joyful celebration filled with colours and blessings.</p>
             </div>
         </div>
         <div class="event-item">
-            <span>7:00 PM</span>
+            <span>7:00 
+                <small>PM</small>
+            </span>
             <div>
                 <h4>Ring Ceremony & Sangeet</h4>
                 <!-- <p> Followed by Dinner</p> -->
@@ -305,7 +302,7 @@
     <div class="event-day">
         <h3>12 December</h3>
         <div class="event-item">
-            <span>12:00 PM</span>
+            <span>12:00 <small>PM</small></span>
             <div>
                 <h4>Sagai</h4>
                 <p>Traditional rituals celebrated with both families.</p>
@@ -313,21 +310,21 @@
             </div>
         </div>
         <!-- <div class="event-item">
-            <span>1:30 PM</span>
+            <span>1:30 <small>PM</small></span>
             <div>
                 <h4>Godbharai & Gangaur Puja</h4>
                 <p>Traditional rituals celebrated with both families.</p>
             </div>
         </div> -->
         <div class="event-item">
-            <span>3:00 PM</span>
+            <span>3:00 <small>PM</small></span>
             <div>
                 <h4>Haldi (Groom) & Ghadoli</h4>
                 <p>A celebration of traditions with love and blessings.</p>
             </div>
         </div>
         <div class="event-item">
-            <span>6:30 PM</span>
+            <span>6:30 <small>PM</small></span>
             <div>
                 <h4>Sehra Bandi & Baraat</h4>
                 <p>The royal procession filled with celebrations.</p>
@@ -335,7 +332,7 @@
             </div>
         </div>
         <div class="event-item">
-            <span>12:35 AM</span>
+            <span>12:35 <small>AM</small></span>
             <div>
                 <h4>Phere</h4>
                 <p>The sacred vows around the holy fire.</p>
@@ -347,20 +344,38 @@
 <!-- VENUE -->
 <!-- ================================= -->
 <section id="venue" class="venue">
-    <div class="venue-image">
-        <img src="assets/venue.jpg" alt="Venue">
-    </div>
-    <div class="venue-content">
-        <span>Venue</span>
-        <h2>Bamboo Saa Sunrise Resort</h2>
-        <p>
-            Jaipur, Rajasthan
+    <div class="section-title">
+        <p class="section-subtitle">
+            Our Venue
         </p>
-        <a target="_blank"
-        href="https://maps.app.goo.gl/ox9b1Liqz9cywozP6"
-        class="gold-button">
-            Get Directions
-        </a>
+        <h2>
+            Bamboo Saa Sunrise Resort
+        </h2>
+        <div class="divider"></div>
+        <p class="section-description">
+            A place where every celebration,
+            every blessing and every memory
+            comes together.
+        </p>
+    </div>
+    <div class="venue-hero">
+        <img src="assets/venue.jpg" alt="Venue">
+        <div class="venue-overlay">
+            <h3>
+                Jaipur, Rajasthan
+            </h3>
+            <p>
+                Nestled amidst serene landscapes,
+                Bamboo Saa Sunrise Resort sets the
+                perfect stage for our wedding weekend.
+            </p>
+            <a
+                href="https://maps.app.goo.gl/ox9b1Liqz9cywozP6"
+                target="_blank"
+                class="gold-button">
+                Get Directions
+            </a>
+        </div>
     </div>
 </section>
 <!-- ================================= -->
@@ -388,65 +403,153 @@
         <span>Join Our Celebration</span>
         <h2>RSVP</h2>
     </div>
-    <form id="rsvpForm">
-        <input
-        id="name"
-        type="text"
-        placeholder="Full Name"
-        required>
-        <input
-        id="phone"
-        type="tel"
-        placeholder="Phone Number"
-        required>
-        <input
-        id="email"
-        type="email"
-        placeholder="Email">
-        <select id="attendance">
-            <option>Will Attend</option>
-            <option>Yes</option>
-            <option>Maybe</option>
-            <option>No</option>
-        </select>
-        <input
-        id="guests"
-        type="number"
-        min="1"
-        value="1"
-        placeholder="Guests">
-        <h4>Events Attending</h4>
-        <div class="checkboxes">
-            <label>
-                <input
-                type="checkbox"
-                value="Haldi"
-                class="event-checkbox">
-                Haldi
-            </label>
-            <label>
-                <input
-                type="checkbox"
-                value="Sangeet"
-                class="event-checkbox">
-                Sangeet
-            </label>
-            <label>
-                <input
-                type="checkbox"
-                value="Wedding"
-                class="event-checkbox">
-                Wedding
-            </label>
+    <form id="rsvpForm" class="rsvp-card">
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input
+                id="name"
+                type="text"
+                required>
         </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input
+                id="phone"
+                type="tel"
+                required>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input
+                id="email"
+                type="email">
+        </div>
+
+        <div class="form-group">
+            <label>Guests</label>
+            <input
+                id="guests"
+                type="number"
+                min="1"
+                value="1">
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Will you be joining us?</label>
+
+        <div class="attendance-options">
+
+            <label class="attendance-card">
+
+                <input
+                    type="radio"
+                    name="attendance"
+                    value="Yes"
+                    checked>
+
+                <span>With Pleasure</span>
+
+            </label>
+
+            <label class="attendance-card">
+
+                <input
+                    type="radio"
+                    name="attendance"
+                    value="Maybe">
+
+                <span>Maybe</span>
+
+            </label>
+
+            <label class="attendance-card">
+
+                <input
+                    type="radio"
+                    name="attendance"
+                    value="No">
+
+                <span>Regretfully Decline</span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Events You'll Attend</label>
+
+        <div class="event-pills">
+
+            <label class="pill">
+
+                <input
+                    type="checkbox"
+                    value="Haldi"
+                    class="event-checkbox">
+
+                <span>Haldi</span>
+
+            </label>
+
+            <label class="pill">
+
+                <input
+                    type="checkbox"
+                    value="Sangeet"
+                    class="event-checkbox">
+
+                <span>Sangeet</span>
+
+            </label>
+
+            <label class="pill">
+
+                <input
+                    type="checkbox"
+                    value="Wedding"
+                    class="event-checkbox">
+
+                <span>Wedding</span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <label>Leave Us A Blessing</label>
+
         <textarea
-        id="message"
-        rows="5"
-        placeholder="Leave us a lovely message..."></textarea>
-        <button type="submit">
-            Send RSVP
-        </button>
-    </form>
+            id="message"
+            rows="5"
+            placeholder="We'd love to hear from you..."></textarea>
+
+    </div>
+
+    <button type="submit" class="gold-button">
+
+        Confirm Attendance
+
+    </button>
+
+</form>
 </section>
 <!-- ================================= -->
 <!-- FOOTER -->

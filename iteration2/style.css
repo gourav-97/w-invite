@@ -136,8 +136,10 @@ nav{
     align-items:center;
     z-index:999;
     backdrop-filter:blur(18px);
-    background:rgba(8,30,36,.45);
     transition:.4s;
+    -webkit-backdrop-filter: blur(18px);
+    background: rgba(8,18,24,.55);
+    border-bottom: 1px solid rgba(212,175,55,.12);
 }
 .logo{
     color:var(--gold);
@@ -175,7 +177,9 @@ nav a:hover::after{
 =========================== */
 .landing{
     position:relative;
-    height:100vh;
+    min-height:100vh;
+    height:auto;
+    padding:110px 0 70px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -267,10 +271,9 @@ nav a:hover::after{
 }
 .amp{
     display:block;
-    font-size:88px;
+    font-size:.8em;
+    margin:.2em 0;
     color:var(--gold);
-    line-height:.75;
-    margin:8px 0;
 }
 .date{
     margin-top:55px;
@@ -540,6 +543,7 @@ nav a:hover::after{
 }
 .person-image:hover img{
     transform:scale(1.03);
+    filter:brightness(1.05);
 }
 .person-image:hover::after{
     transform:translate(6px,6px);
@@ -644,88 +648,340 @@ nav a:hover::after{
 /* ======================================
    EVENTS
 ====================================== */
+/* ===========================================
+   EVENTS
+=========================================== */
+
 .events{
+
     background:var(--paper);
+
     color:#222;
+
 }
+
 .event-day{
-    max-width:1000px;
-    margin:80px auto;
+
+    max-width:980px;
+
+    margin:90px auto;
+
 }
+
+/* DAY TITLE */
+
 .event-day h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:64px;
+
+    font-weight:500;
+
+    text-align:center;
+
     color:var(--gold);
-    font-size:44px;
-    margin-bottom:40px;
-    font-family:'Cinzel',serif;
+
+    letter-spacing:1px;
+
+    margin-bottom:55px;
+
+    position:relative;
+
 }
+
+.event-day h3::before,
+.event-day h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    width:30%;
+
+    height:1px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(212,175,55,.45),
+        transparent
+    );
+
+}
+
+.event-day h3::before{
+
+    left:0;
+
+}
+
+.event-day h3::after{
+
+    right:0;
+
+}
+
+/* EVENT ROW */
+
 .event-item{
+
     display:grid;
-    grid-template-columns:180px 1fr;
-    gap:40px;
-    margin-bottom:35px;
-    padding:35px;
-    background:white;
-    border-left:4px solid var(--gold);
-    transition:.35s;
+
+    grid-template-columns:140px 1fr;
+
+    gap:42px;
+
+    align-items:start;
+
+    padding:32px 0;
+
+    border-bottom:1px solid rgba(212,175,55,.14);
+
+    transition:.35s ease;
+
 }
+
+.event-item:last-child{
+
+    border-bottom:none;
+
+}
+
 .event-item:hover{
-    transform:translateX(10px);
+
+    transform:translateX(6px);
+
+    border-color:rgba(212,175,55,.38);
+
 }
+
+/* TIME */
+
 .event-item span{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    font-family:'Cinzel',serif;
+
     color:var(--gold);
-    font-size:24px;
-    font-weight:700;
+
+    font-weight:600;
+
+    line-height:1;
+
 }
+
+.event-item span strong{
+
+    font-size:27px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.event-item span small{
+
+    margin-top:8px;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    opacity:.75;
+
+}
+
+/* EVENT TITLE */
+
 .event-item h4{
-    font-size:30px;
-    margin-bottom:10px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    color:#222;
+
+    margin-bottom:6px;
+
+    line-height:1.15;
+
 }
+
+/* DESCRIPTION */
+
 .event-item p{
-    color:#666;
-    font-size:20px;
+
+    max-width:560px;
+
+    color:#777;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin:0;
+
 }
 /* ======================================
    VENUE
 ====================================== */
+/*==========================================
+                VENUE
+==========================================*/
+
 .venue{
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
-    min-height:90vh;
-    padding:0;
-    background:#0b2b33;
+
+    background:var(--paper);
+
+    padding:120px 0;
+
 }
-.venue-image{
+
+/* HERO IMAGE */
+
+.venue-hero{
+
+    width:min(1400px,92%);
+
+    margin:70px auto;
+
+    position:relative;
+
+    border-radius:30px;
+
     overflow:hidden;
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.18);
+
 }
-.venue-image img{
+
+.venue-hero img{
+
     width:100%;
-    height:100%;
+
+    height:700px;
+
     object-fit:cover;
-    transition:1s;
+
+    transition:8s ease;
+
 }
-.venue-image:hover img{
+
+.venue:hover .venue-hero img{
+
     transform:scale(1.08);
+
 }
-.venue-content{
+
+.venue-overlay{
+    position:absolute;
+    inset:0;
     display:flex;
+
     flex-direction:column;
-    justify-content:center;
-    padding:90px;
+
+    justify-content:flex-end;
+
+    align-items:flex-start;
+
+    padding:50px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.20),
+        transparent
+    );
+
 }
-.venue-content span{
+
+.venue-overlay h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:58px;
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.venue-overlay p{
+
+    max-width:650px;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* MAP */
+
+.venue-map{
+
+    width:min(1100px,90%);
+
+    margin:80px auto 0;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.15);
+
+}
+
+.venue-map iframe{
+
+    width:100%;
+
+    height:500px;
+
+    border:none;
+
+}
+/* ===========================================
+   VENUE SECTION TITLE OVERRIDES
+=========================================== */
+
+.venue .section-subtitle{
+
     color:var(--gold);
-    text-transform:uppercase;
-    letter-spacing:5px;
+
 }
-.venue-content h2{
-    font-size:60px;
-    margin:25px 0;
-    font-family:'Cinzel',serif;
+
+.venue .section-title h2{
+
+    color:#222;
+
 }
-.venue-content p{
-    font-size:24px;
-    color:#d9d9d9;
-    margin-bottom:45px;
+
+.venue .section-description{
+
+    color:#666;
+
 }
 /* ======================================
    GALLERY
@@ -754,72 +1010,286 @@ nav a:hover::after{
 /* ======================================
    RSVP
 ====================================== */
+/*==========================================
+                RSVP
+==========================================*/
+
 .rsvp{
-    background:#0d3138;
+
+    background:#fdf9f4;
+
+    padding:140px 0;
+
 }
-.rsvp form{
-    max-width:900px;
-    margin:auto;
+
+.rsvp-card{
+
+    width:min(900px,90%);
+
+    margin:70px auto 0;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:60px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.08);
+
+    border:1px solid rgba(212,175,55,.18);
+
+}
+
+/* ROWS */
+
+.form-row{
+
     display:grid;
-    gap:24px;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
 }
-.rsvp input,
-.rsvp textarea,
-.rsvp select{
-    width:100%;
-    padding:22px;
-    background:transparent;
-    border:none;
-    border-bottom:1px solid rgba(255,255,255,.25);
-    color:white;
-    font-size:22px;
-    font-family:'Cormorant Garamond',serif;
-    outline:none;
-}
-.rsvp input::placeholder,
-.rsvp textarea::placeholder{
-    color:#d0d0d0;
-}
-.rsvp select{
-    color:white;
-}
-.rsvp option{
-    color:black;
-}
-.rsvp textarea{
-    resize:vertical;
-    min-height:170px;
-}
-.checkboxes{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin:20px 0;
-}
-.checkboxes label{
+
+/* FORM GROUP */
+
+.form-group{
+
     display:flex;
-    align-items:center;
-    gap:15px;
-    font-size:22px;
+
+    flex-direction:column;
+
+    margin-bottom:30px;
+
 }
-.checkboxes input{
-    width:22px;
-    height:22px;
-}
-.rsvp button{
-    margin-top:30px;
-    padding:22px;
-    background:transparent;
-    border:1px solid var(--gold);
+
+.form-group label{
+
+    font-family:'Cinzel',serif;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
     color:var(--gold);
-    font-size:18px;
-    letter-spacing:4px;
-    cursor:pointer;
-    transition:.4s;
+
+    margin-bottom:12px;
+
 }
-.rsvp button:hover{
+
+/* INPUTS */
+
+.rsvp input,
+.rsvp textarea{
+
+    width:100%;
+
+    border:none;
+
+    border-bottom:1px solid rgba(0,0,0,.18);
+
+    background:transparent;
+
+    padding:14px 0;
+
+    font-size:17px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.35s;
+
+}
+
+.rsvp input:focus,
+.rsvp textarea:focus{
+
+    outline:none;
+
+    border-color:var(--gold);
+
+}
+
+.rsvp textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+}
+
+/* ATTENDANCE */
+
+.attendance-options{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.attendance-card{
+
+    cursor:pointer;
+
+}
+
+.attendance-card input{
+
+    display:none;
+
+}
+
+.attendance-card span{
+
+    display:block;
+
+    padding:15px 26px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:50px;
+
+    transition:.35s;
+
+    color:#444;
+
+    background:white;
+
+}
+
+.attendance-card input:checked + span{
+
     background:var(--gold);
-    color:#222;
+
+    color:white;
+
+    border-color:var(--gold);
+
+    box-shadow:0 10px 30px rgba(212,175,55,.25);
+
+}
+
+/* EVENT PILLS */
+
+.event-pills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.pill{
+
+    cursor:pointer;
+
+}
+
+.pill input{
+
+    display:none;
+
+}
+
+.pill span{
+
+    display:block;
+
+    padding:14px 24px;
+
+    border-radius:40px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+.pill input:checked + span{
+
+    background:var(--gold);
+
+    color:white;
+
+    border-color:var(--gold);
+
+}
+
+/* BUTTON */
+
+.rsvp .gold-button{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:18px;
+
+    font-size:17px;
+
+    letter-spacing:2px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .rsvp{
+
+        padding:90px 0;
+
+    }
+
+    .rsvp-card{
+
+        padding:35px 25px;
+
+        border-radius:20px;
+
+    }
+
+    .form-row{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+
+    }
+
+    .attendance-options{
+
+        flex-direction:column;
+
+    }
+
+    .attendance-card span{
+
+        text-align:center;
+
+    }
+
+}
+.rsvp button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
 }
 /* ======================================
    FOOTER
@@ -945,6 +1415,21 @@ footer{
         grid-template-columns:1fr;
     }
 }
+@media (max-width:768px){
+
+    .venue-overlay .gold-button{
+
+        width:100%;
+
+        max-width:260px;
+
+        text-align:center;
+
+        padding:16px 20px;
+
+        font-size:15px;
+    }
+}
 @media(max-width:600px){
     section{
         padding:90px 25px;
@@ -1047,33 +1532,54 @@ margin:auto;
     position:absolute;
     width:4px;
     height:4px;
-    background:rgba(201,164,93,.7);
+    background:radial-gradient(
+    circle,
+    #fff,
+    rgba(212,175,55,.9)
+    );
+    box-shadow:
+    0 0 10px rgba(212,175,55,.9),
+    0 0 18px rgba(212,175,55,.45);
     border-radius:50%;
-    animation:floatParticle linear infinite;
+    animation:
+        floatParticle 14s ease-in-out infinite,
+        twinkle 4s ease-in-out infinite;
 }
 .particles span:nth-child(1){
     left:12%;
-    animation-duration:18s;
+    animation-duration:18s, 4s;
 }
+
 .particles span:nth-child(2){
     left:32%;
-    animation-duration:22s;
+    animation-duration:22s, 5s;
 }
+
 .particles span:nth-child(3){
     left:48%;
-    animation-duration:15s;
+    animation-duration:15s, 3.5s;
 }
+
 .particles span:nth-child(4){
     left:66%;
-    animation-duration:20s;
+    animation-duration:20s, 4.5s;
 }
+
 .particles span:nth-child(5){
     left:82%;
-    animation-duration:16s;
+    animation-duration:16s, 3s;
 }
 .particles span:nth-child(6){
     left:93%;
-    animation-duration:19s;
+    animation-duration:19s, 3s;
+}
+@keyframes twinkle{
+    0%,100%{
+        opacity:.18;
+    }
+    50%{
+        opacity:.85;
+    }
 }
 @keyframes floatParticle{
     from{
